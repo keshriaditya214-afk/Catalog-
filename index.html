@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Furniture Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo-area">
+                <img id="store-logo" src="" alt="Store Logo" style="display:none;">
+                <h1 id="store-name-header">Furniture Store</h1>
+            </a>
+            
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="nav-links">
+                <a href="#hero" onclick="toggleMenu()">Home</a>
+                <a href="#categories-section" onclick="toggleMenu()">Categories</a>
+                <a href="#offers-section" onclick="toggleMenu()">Offers</a>
+                <a href="#contact" onclick="toggleMenu()">Contact</a>
+                <a href="#" class="btn-whatsapp nav-wa" onclick="contactStoreGeneral()">Chat on WhatsApp</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h2 id="hero-title">Elevate Your Living Space</h2>
+            <p id="hero-desc">Discover premium furniture designed for comfort, durability, and timeless style.</p>
+            <div class="hero-buttons">
+                <a href="#all-products" class="btn-primary">Explore Collection</a>
+                <a href="#" class="btn-whatsapp" onclick="contactStoreGeneral()">Order on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search-section" class="container section-padding">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search furniture, categories, or descriptions...">
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories-section" class="container section-padding">
+        <h3 class="section-title">Shop by Category</h3>
+        <div class="categories-wrapper" id="categories-container">
+            <button class="category-btn active" onclick="filterCategory('All')">All</button>
+        </div>
+    </section>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading-state">
+        <div class="spinner"></div>
+        <p>Loading collection...</p>
+    </div>
+
+    <!-- Special Offers -->
+    <section id="offers-section" class="container section-padding" style="display:none;">
+        <h3 class="section-title">Special Offers</h3>
+        <div class="product-grid" id="offers-grid"></div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured-section" class="container section-padding" style="display:none;">
+        <h3 class="section-title">Featured Furniture</h3>
+        <div class="product-grid" id="featured-grid"></div>
+    </section>
+
+    <!-- All Products -->
+    <section id="all-products" class="container section-padding">
+        <h3 class="section-title" id="catalog-title">Our Collection</h3>
+        <div class="product-grid" id="products-grid"></div>
+        <p id="no-products-msg" style="display:none; text-align:center;">No products found.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <h3 class="section-title">Visit Us</h3>
+            <div class="contact-card">
+                <h4 id="contact-store-name">Store Name</h4>
+                <p><strong>Address:</strong> <span id="contact-address">Loading...</span></p>
+                <p><strong>Hours:</strong> <span id="contact-hours">Loading...</span></p>
+                <p><strong>Phone:</strong> <span id="contact-phone">Loading...</span></p>
+                
+                <div class="contact-buttons">
+                    <button class="btn-whatsapp" onclick="contactStoreGeneral()">Chat on WhatsApp</button>
+                    <a href="#" id="contact-ig" class="btn-outline" target="_blank" style="display:none;">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3 id="footer-store-name">Store Name</h3>
+                <p id="footer-address">Address goes here</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#hero">Home</a>
+                <a href="#categories-section">Categories</a>
+                <a href="#offers-section">Offers</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p id="footer-phone">Phone: ...</p>
+                <a href="#" onclick="contactStoreGeneral()" style="color: var(--whatsapp); font-weight:bold;">WhatsApp Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 <span id="copyright-name">Store Name</span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
