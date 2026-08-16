@@ -9,7 +9,7 @@ const WHATSAPP_NUMBER = "919876543211"; // Example: 91 for India + Number
 // The ID is the long string of letters and numbers in your Google Sheet URL
 // Example URL: https://docs.google.com/spreadsheets/d/1A2B3C4D5E6F7G8H9I0/edit
 // ID is: 1A2B3C4D5E6F7G8H9I0
-const GOOGLE_SHEET_ID = "1ovzJhs-40RuuV9PFPL5M70KCUiLh5NByjm4fDg5 C-JE";
+const GOOGLE_SHEET_ID = "1ovzJhs-40RuuV9PFPL5M70KCUiLh5NByjm4fDg5C-JE";
 
 // ==================================================
 // SYSTEM VARIABLES (DO NOT EDIT)
